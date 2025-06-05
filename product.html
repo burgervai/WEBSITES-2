@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Your Sneaker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><a href="index.html">Sneaker Customizer</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="product.html">Customize</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="login.html" id="login-link">Login</a></li>
+                    <li><a href="register.html" id="register-link">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="customizer">
+            <div class="customizer-container">
+                <div class="sneaker-preview">
+                    <div class="sneaker-display" id="sneaker-display">
+                        <img src="assets/sneaker-classic.png" alt="Sneaker Preview" id="sneaker-preview">
+                        <div class="color-overlay" id="color-overlay"></div>
+                    </div>
+                    <div class="sneaker-details">
+                        <h2 id="sneaker-title">Classic White</h2>
+                        <div class="price-display">
+                            <span class="price-label">Total:</span>
+                            <span class="price-amount" id="total-price">$50</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form id="customize-form" class="customize-form">
+                    <div class="form-section">
+                        <h3><i class="fas fa-shoe-prints"></i> Choose Your Style</h3>
+                        <div class="style-options">
+                            <div class="style-option" data-style="classic">
+                                <img src="assets/thumb-classic.jpg" alt="Classic">
+                                <span>Classic White</span>
+                                <span class="price">$50</span>
+                            </div>
+                            <div class="style-option" data-style="runner">
+                                <img src="assets/thumb-runner.jpg" alt="Runner">
+                                <span>Sport Runner</span>
+                                <span class="price">$65</span>
+                            </div>
+                            <div class="style-option" data-style="hightop">
+                                <img src="assets/thumb-hightop.jpg" alt="High-Top">
+                                <span>Urban High-Top</span>
+                                <span class="price">$70</span>
+                            </div>
+                            <div class="style-option" data-style="retro">
+                                <img src="assets/thumb-retro.jpg" alt="Retro">
+                                <span>Retro Runner</span>
+                                <span class="price">$75</span>
+                            </div>
+                            <div class="style-option" data-style="minimal">
+                                <img src="assets/thumb-minimal.jpg" alt="Minimal">
+                                <span>Minimalist</span>
+                                <span class="price">$60</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-palette"></i> Choose Color</h3>
+                        <div class="color-options">
+                            <div class="color-option" data-color="#ffffff" style="background-color: #ffffff;" title="White"></div>
+                            <div class="color-option" data-color="#000000" style="background-color: #000000;" title="Black"></div>
+                            <div class="color-option" data-color="#e74c3c" style="background-color: #e74c3c;" title="Red"></div>
+                            <div class="color-option" data-color="#3498db" style="background-color: #3498db;" title="Blue"></div>
+                            <div class="color-option" data-color="#2ecc71" style="background-color: #2ecc71;" title="Green"></div>
+                            <div class="color-option" data-color="#f1c40f" style="background-color: #f1c40f;" title="Yellow"></div>
+                            <div class="color-option" data-color="#9b59b6" style="background-color: #9b59b6;" title="Purple"></div>
+                            <div class="color-option" data-color="#e67e22" style="background-color: #e67e22;" title="Orange"></div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3><i class="fas fa-ruler"></i> Select Size</h3>
+                        <div class="size-options">
+                            <div class="size-option">6</div>
+                            <div class="size-option">7</div>
+                            <div class="size-option active">8</div>
+                            <div class="size-option">9</div>
+                            <div class="size-option">10</div>
+                            <div class="size-option">11</div>
+                            <div class="size-option">12</div>
+                        </div>
+                    </div>
+                    <div class="form-section">
+                        <h3><i class="fas fa-star"></i> Add Extras</h3>
+                        <div class="extras-options">
+                            <label class="extra-option">
+                                <input type="checkbox" name="extras" value="custom_laces">
+                                <div class="extra-content">
+                                    <i class="fas fa-shoe-prints"></i>
+                                    <span>Custom Laces</span>
+                                    <span class="extra-price">+$5</span>
+                                </div>
+                            </label>
+                            <label class="extra-option">
+                                <input type="checkbox" name="extras" value="engraving">
+                                <div class="extra-content">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Personalized Engraving</span>
+                                    <span class="extra-price">+$10</span>
+                                </div>
+                            </label>
+                            <label class="extra-option">
+                                <input type="checkbox" name="extras" value="waterproof">
+                                <div class="extra-content">
+                                    <i class="fas fa-umbrella"></i>
+                                    <span>Waterproof Coating</span>
+                                    <span class="extra-price">+$8</span>
+                                </div>
+                            </label>
+                            <label class="extra-option">
+                                <input type="checkbox" name="extras" value="premium_box">
+                                <div class="extra-content">
+                                    <i class="fas fa-box-open"></i>
+                                    <span>Premium Gift Box</span>
+                                    <span class="extra-price">+$15</span>
+                                </div>
+                            </label>
+                            <label class="extra-option">
+                                <input type="checkbox" name="extras" value="fast_shipping">
+                                <div class="extra-content">
+                                    <i class="fas fa-shipping-fast"></i>
+                                    <span>Express Shipping</span>
+                                    <span class="extra-price">+$12</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn-primary btn-add-to-cart">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart - $<span id="dynamic-price">50</span>
+                        </button>
+                        <button type="button" class="btn-secondary btn-wishlist">
+                            <i class="far fa-heart"></i> Add to Wishlist
+                        </button>
+                    </div>
+                    
+                    <div class="shipping-info">
+                        <div class="info-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free shipping on orders over $50</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-undo"></i>
+                            <span>30-day return policy</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sneaker Customizer. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="js/product.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
